@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #A1D1DB;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+
+
+    /* Position fix */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+}
+
+body{
+    height: 2000px;
+}
+
+.header_logo{
+    /* margin: 15px; */
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+}
+.header_logo img{
+    height: 20px;
+    cursor: pointer;
+}
+.header_logo span{
+    font-weight: bold;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+.header-left div{
+    margin: 0 15px;
+}
+.logo{
+    position: absolute;
+    left: 50%;
+}
+
+.logo img{
+    height: 70px;
+}
+
+.input_box{
+    border: none;
+    height: 30px;
+    width: 250px;
+    padding-left: 10px;
+    border-radius: 25px;
+}
+
+.input_box::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search_bar{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.search_bar div{
+    margin: 0 15px;
+}
+
+.wishlist{
+    margin-left: 10px;   
+    font-weight: bold;
+}
+.bag{
+    margin: 0px 10px;
+    font-weight: bold;
+}
