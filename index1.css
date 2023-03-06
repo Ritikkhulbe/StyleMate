@@ -66,6 +66,8 @@ margin-bottom: 20px;
     color: black;
     background-color: white;
     margin-left: 6px;
+
+    cursor: pointer;
 }
 
 #search-form{
