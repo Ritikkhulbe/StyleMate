@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Image Search</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" href="index1.css">
     <script>
       $(document).ready(function() {
         $("#search-form").on("submit", function(event) {
@@ -34,41 +35,17 @@
         });
       });
     </script>
-    <style>
-      .image {
-        display: inline-block;
-        margin: 10px;
-        width: 200px;
-        height: 200px;
-        background-size: cover;
-      }
-      .result {
-        display: inline-block;
-        width: calc(25% - 20px);
-        padding: 10px;
-      }
-      .result a {
-        display: flex;
-        margin-bottom: 10px;
-      }
-      .result img {
-        max-width: 100%;
-        height: auto;
-      }
-      .title {
-        font-weight: bold;
-      }
-      .row {
-        margin-bottom: 20px;
-      }
-    </style>
   </head>
   <body>
-    <h1>Image Search</h1>
+    <div class = "header_logo">
+      <img src = "Logo.png">
+    </div>
+    <h1 class = "title">Search For Your Outfit</h1>
     <form id="search-form">
-      <label for="search-box">Search for images:</label>
-      <input type="text" id="search-box" name="search-box" required>
-      <button type="submit">Search</button>
+      <input type="text" id="search-box" name="search-box" required placeholder = "Enter A Part of Your Existing Wordrobe">
+      <button type="submit" class = "submit">
+        <img class = "search-icon" src = "search.svg">
+      </button>
     </form>
     <div id="results"></div>
   </body>
