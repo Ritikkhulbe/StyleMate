@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Outfits</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+
+    <!-- plugin scripts -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300,400,400i,500,600,700,800,900%7CSatisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/travify-icons.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/nouislider.pips.css">
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- <div class="preloader">
+        <img src="images/loader.png" class="preloader__image" alt="">
+    </div>/.preloader -->
+    <div class="page-wrapper">
+        <div class="site-header__header-one site-header__home-two-wrap">
+            <header class="main-nav__header-one site-header__home-two " style = "background-color: #A1D1DB;">
+                <nav class="header-navigation stricky">
+                    <div class="container" style = "height: 40px;">                      
+                        <div class="main-nav__logo-box" style = "margin-top: 45px;">
+                            <a href="index.html" class="main-nav__logo">
+                                <img src="Logo.png" class="main-logo" width="123" alt="Awesome Image" />
+                            </a>
+                        </div><!-- /.logo-box -->
+                        
+                    </div>
+                    <!-- /.container -->
+                </nav>
+            </header><!-- /.site-header -->
+        </div><!-- /.site-header__header-one-wrap -->
+
+        <div>
+            <form id = "new_input-bar"action="#" class="search-popup__form">
+                <div class = "Title-Search" style = "font-family: Arial; font-size: 35px; color: black; font-weight: bold;">
+                    <p>Search For Your Outfit</p>
+                </div>
+                <input type="text" name="search" Placeholder="Enter A Part of Your Existing Wordrobe..." style="height: 50px; width: 500px; border: 3px solid black; border-radius: 30px; font-family:Arial; font-size: 18px; padding-left: 22px; ">
+                <button type="submit">
+                    <img src = "search.svg">
+                </button>
+            </form>
+        </div>
+
+        <section class="destinations-three">
+            <div class="container">
+                <div id="results" class="row"></div>
+                
+            </div><!-- /.container -->
+        </section><!-- /.destinations-three -->
+
+
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <div class="side-menu__block">
+
+
+
+
+    <div class="search-popup">
+        <div class="search-popup__overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div><!-- /.search-popup__overlay -->
+        <div class="search-popup__inner">
+            <form action="#" class="search-popup__form">
+                <input type="text" name="search" OutfitNameholder="Type here to Search....">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div><!-- /.search-popup__inner -->
+    </div><!-- /.search-popup -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/typed-2.0.11.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <!-- template scripts -->
+    <script src="js/theme.js"></script>
+    <!-- <scrpt src="js/destinations.json"></scrpt> -->
+    <script>
+        $(document).ready(function() {
+        $("#search-form").on("submit", function(event) {
+          event.preventDefault();
+          var query = $("#search-box").val();
+          var apikey = "AIzaSyAY5GomLyDCMxqTQ1UugUqqiYNNZFXlwio";
+          var cseid = "a0f75123d6e714570";
+          var url = "https://www.googleapis.com/customsearch/v1?key=" + apikey + "&cx=" + cseid + "&q=" + query + "&searchType=image";
+          $.getJSON(url, function(data) {
+            var results = data.items;
+            var html = "";
+            $.each(results, function(index, item) {
+              if (index % 4 == 0) {
+                html += '<div class="row">';
+              }
+              html += '<div class="result">';
+              html += '<a href="' + item.link + '" target="_blank">';
+              html += '<img class="image"  src="' + item.image.thumbnailLink + '" alt="' + item.title + '">';
+              html += '</a>';
+             /* html += '<div class="title">' + item.title + '</div>';
+              html += '<div class="snippet">' + item.snippet + '</div>'; */
+              html += '</div>';
+              if ((index + 1) % 4 == 0 || index == results.length - 1) {
+                html += '</div>';
+              }
+            });
+            $("#results").html(html);
+          });
+        });
+      });
+
+     var urlParams = new URLSearchParams(window.location.search);
+        var search=urlParams?.get('search');  
+        function appendData(data) {
+            var mainContainer = document.getElementById("results");
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].Outfits == search) {
+                var div = document.createElement("div");
+                div.classList="col-lg-4 col-md-6"
+                div.innerHTML=`<div class="destinations-three__single">
+                            <img src="${data[i].image}" alt=""/> 
+                            <div class="destinations-three__content">
+                                <h3><a href="outfit-details.html?search=${data[i].OutfitName}">${data[i].Outfits}</a></h3>
+                            </div>
+                            <div class="destinations-three__hover-content">
+                                <h3><a href="outfit-details.html?search=${data[i].OutfitName}"> ${data[i].OutfitName}</a></h3>
+                            </div>
+                        </div>`
+     
+                mainContainer.appendChild(div);
+                }
+                
+                
+            }
+        }
+
+        $( document ).ready(function() {       
+
+        fetch('outfits.json', {mode: 'no-cors'})
+            .then(function (response) {           
+                return response.json();
+            })
+            .then(function (data) {           
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+        } );
+
+      
+    </script>
+</body>
+
+</html>

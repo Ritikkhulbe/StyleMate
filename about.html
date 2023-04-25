@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - StyleMate</title>
     <link rel = "stylesheet" href = "css/header.css">
     <link rel = "stylesheet" href = "css/slider.css">
     <link rel = "stylesheet" href = "css/category.css">
-    <title>StyleMate</title>
+    <link rel = "stylesheet" href = "css/about.css">
 </head>
-
-<body>
+<body style = "height: 500px;">
     <header>
         <div class = "header-left">
             <div class = "header_logo">
@@ -27,7 +27,9 @@
 
 
         <div class = "logo"  style = "margin-left: 100px;">
-            <img src = "Logo.png">
+            <a href="index.html" class="main-nav__logo">
+                <img src="Logo.png" class="main-logo" width="123" alt="Awesome Image" />
+            </a>
         </div>
 
         <div class = "search_bar">
@@ -54,51 +56,18 @@
         </div>
 
     </header>
-<!-- Slider -->
-    <div class = "slider">
-        <!-- <button class = "pre-btn">
-            <img src = "slider_img/left-arrow.svg">
-        </button> -->
-
-        <div class = "slider_container">
-            <img src = "slider_img/slider1.jpeg" class = "slide">
-            <!-- <img src = "https://picsum.photos/id/238/1000/400" class = "slide">
-            <img src = "https://picsum.photos/id/239/1000/400" class = "slide">
-            <img src = "https://picsum.photos/id/236/1000/400" class = "slide"> -->
-    
+    <div class = "about_image">
+        <div style = "opacity: 0.6">
+            <img src = "about.jpg"  style = "margin-top: 70px;">
         </div>
-        <a href = "outfits.html">
-            <button class = "shop-now">Shop Now</button>
-        </a>
-        <!-- <button class = "nxt-btn">
-            <img src = "slider_img/right-arrow.svg">
-        </button> -->
-    </div>
-
-    <!-- <div class = "slider_nav">
-        <button onclick = "goPrev()">prev</button>
-        <button onclick = "goNext()">next</button>
-    </div> -->
-
-<!-- Category -->
-    <div class = "category">
-        <span>Shop By Category</span>
-        <div class = "category-container">
-            <div class = "category-div">
-                <img src = "category/ethenic.jpg">
-                <p>Ethenic</p>
-            </div>
-            <div class = "category-div">
-                <img src = "category/jackets.avif">
-                <p>Jackets</p>
-            </div>
-            <div class = "category-div">
-                <img src = "category/western.webp">
-                <p>Western Wear</p>
-            </div>
-
+        <div class = "about">
+        </div>
+        <div class = "about_heading">
+            <h1>About</h1>
         </div>
     </div>
-    <script src = "js/slider.js"></script>
+    <div class = "about_us_description">
+        <p>At StyleMate, we are passionate about fashion and technology. Our team consists of individuals with diverse backgrounds and expertise, ranging from fashion design to machine learning. We believe that fashion should be accessible and easy for everyone, which is why we developed StyleMate. Our platform leverages the power of AI and machine learning to provide personalized outfit recommendations, and our image upload feature makes it easy for users to find the products they love. Our goal is to empower individuals to express themselves through fashion and make the process of creating stylish outfits effortless.</p>
+    </div>
 </body>
 </html>

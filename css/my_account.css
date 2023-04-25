@@ -1,0 +1,46 @@
+.account_header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #A1D1DB;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+
+
+    /* Position fix */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+}
+.header{
+    position: relative;
+}
+
+.sidebar{
+    height:650px;
+    width: 200px;
+    background-color: #86b2bb;
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 100;
+}
+
+.sidebar_divisions{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 160px;
+    margin-left: 30px;
+}
+
+.sidebar_divisions a{
+    margin-bottom: 20px;
+    z-index: 110;
+
+    color: black;
+}

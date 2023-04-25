@@ -1,0 +1,32 @@
+.about_image{
+    position:relative;
+    margin-top: 50px;
+}
+.about{
+    height: 130px;
+    width: 600px;
+    background-color: #a5bdc2;
+
+    position: absolute;
+    left: 330px;
+    top: 100px;
+}
+
+.about_heading{
+    position: absolute;
+    left: 560px;
+    top: 130px;
+
+
+    font-size: 30px;
+}
+
+.about_us_description{
+    display: flex;
+    width: 650px;
+
+    margin-left: 320px;
+    font-family: 'Varela Round', sans-serif;
+
+    margin-top: 40px;
+}
