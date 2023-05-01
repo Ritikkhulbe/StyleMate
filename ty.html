@@ -3,8 +3,10 @@
 <head>
     <style>
         input[type=button], input[type=submit], input[type=file] {
-            background-color: #04AA6D;
-            border: none;
+            background-color: #83b0ba;
+            
+            border: 2px black solid;
+            border-radius: 10px;
             color: white;
             padding: 16px 32px;
             text-decoration: none;
@@ -181,8 +183,8 @@ body{
     </header>
     <div style="height: 5%;"></div>
     <form method="POST" action="/predict" enctype="multipart/form-data">
-        <input type="file" name="image" style="height: 30px;">
-        <input type="submit" value="Submit" style="margin-left: 90px; margin-top: 40px;">
+        <input type="file" name="image" style="margin-top: 150px; height: 30px;">
+        <input type="submit" value="Submit" style="margin-left: 190px; margin-top: 40px;">
     </form>
 
     <div id="results"></div>
